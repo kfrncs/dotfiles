@@ -70,3 +70,7 @@ command Here lcd %:p:h
 " line numbers & relative line numbers
 set number
 set relativenumber
+
+" set OS clipboard yank and pull to \y \p
+noremap <Leader>y "+y
+noremap <Leader>p "+p
