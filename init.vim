@@ -77,3 +77,8 @@ noremap <Leader>p "+p
 
 " enable mouse
 set mouse=a
+
+" enable persistent undo
+" NOTE; this folder must exist
+set undofile
+set undodir=~/nvim/undo
