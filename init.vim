@@ -30,7 +30,7 @@ let g:deoplete#enable_at_startup = 1
 
 
 " sets colour
-colo pablo
+colo slate 
 
 " TAB STUFF
 " CTRL+DEL closes a tab
@@ -74,3 +74,6 @@ set relativenumber
 " set OS clipboard yank and pull to \y \p
 noremap <Leader>y "+y
 noremap <Leader>p "+p
+
+" enable mouse
+set mouse=a
