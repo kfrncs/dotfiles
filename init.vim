@@ -36,7 +36,7 @@ colo slate
 " CTRL+DEL closes a tab
 nnoremap <C-Delete> :tabclose<CR>
 
-" N opens a new tab
+" Ctrl-N opens a new tab
 nnoremap <C-N> :tabe<CR>
 
 " H and L scroll through tabs in normal mode (instead of gt/gT)
