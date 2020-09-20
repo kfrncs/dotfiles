@@ -111,6 +111,3 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # don't let zsh auto-retitle tmux windows
 DISABLE_AUTO_TITLE="true"
-
-# raspberry pi ssh alias
-alias pi="ssh ken@99.239.112.177"
