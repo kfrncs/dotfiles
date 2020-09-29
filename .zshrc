@@ -2,7 +2,10 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/ken/.oh-my-zsh"
+ export ZSH="/home/ken/.oh-my-zsh"
+
+# Delete green background highlight on folders returned from ls 
+export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 
 ## pyenv configs
 export PYENV_ROOT="$HOME/.pyenv"
@@ -104,8 +107,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 #
-#
-export PATH=~/anaconda3/bin:$PATH
+
 . /home/ken/z.sh
 export PATH="$HOME/.cargo/bin:$PATH"
 
