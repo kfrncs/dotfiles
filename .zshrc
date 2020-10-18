@@ -107,6 +107,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 #
+" set tag command to put tags inside .git folder of a project
+alias tag="ctags -R -f ./.git/tags ."
+
+
 
 . /home/ken/z.sh
 export PATH="$HOME/.cargo/bin:$PATH"
