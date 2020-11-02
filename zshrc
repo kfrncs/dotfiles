@@ -111,3 +111,5 @@ eval "$(starship init zsh)"
 # define rust source
 export RUST_SRC_PATH=${HOME}/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src
 
+# start tmux on shell start
+[[ $TERM != "screen" ]] && exec tmux
