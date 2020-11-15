@@ -11,3 +11,11 @@ set fish_greeting
 
 # set prompt to Starship
 starship init fish | source
+
+# make it so ... and .... go up 2 and 3 directories
+function ...
+  ../..
+end
+function ....
+  ../../..
+end
