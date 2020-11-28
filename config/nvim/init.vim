@@ -5,7 +5,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'rust-lang/rust.vim'
 
 " auto-pair
-Plug 'jiangmiao/auto-pairs'
+Plug 'vim-scripts/auto-pairs-gentle'
 
 " call git with :Git
 Plug 'tpope/vim-fugitive'
