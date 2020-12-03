@@ -25,5 +25,8 @@ print("THIS SCRIPT IS FOR BUILDING A NEW SYSTEM. ARE YOU SURE?")
 # z fish
 # $ fisher install jethrokuan/z
 
+# git status plugin
+# $ fisher install mattgreen/lucid.fish
+
 # gitnow (git helper)
 # $ fisher install joseluisq/gitnow@2.5.1
