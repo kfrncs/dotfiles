@@ -11,6 +11,12 @@ print("THIS SCRIPT IS FOR BUILDING A NEW SYSTEM. ARE YOU SURE?")
 
 # ANY DISTRO
 
+# install wget tree git neovim tmux 
+
+# install rust
+
+# install bat
+
 # install fish shell
 # $ curl -L https://get.oh-my.fish | fish
 
