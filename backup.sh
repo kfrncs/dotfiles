@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+# TODO convert to python
 
 echo "copying ~/.tmux.conf"
 cp ~/.tmux.conf tmux.conf
