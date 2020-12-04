@@ -70,7 +70,8 @@ print("populating dotfiles...... NOT")
 # $ gsettings set org.gnome.shell enable-hot-corners false
 
 
-
+print("check versions for python: ")
+run("pip --version".split())
 
 # fisher plugs (for some reason not working)
 
