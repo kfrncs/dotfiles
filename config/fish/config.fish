@@ -2,7 +2,7 @@
 set fish_greeting
 
 # set prompt to Starship
-# starship init fish | source
+ starship init fish | source
 
 # add rust/cargo to path
 set -x PATH $PATH ~/.cargo/bin

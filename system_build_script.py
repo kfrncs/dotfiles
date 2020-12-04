@@ -11,11 +11,11 @@ print("THIS SCRIPT IS FOR BUILDING A NEW SYSTEM. ARE YOU SURE?")
 
 # ANY DISTRO
 
-# install wget tree git neovim tmux 
+# install wget tree git neovim tmux
 
 # install rust
 
-# install bat
+# install bat, alacritty
 
 # install fish shell
 # $ curl -L https://get.oh-my.fish | fish
@@ -35,4 +35,4 @@ print("THIS SCRIPT IS FOR BUILDING A NEW SYSTEM. ARE YOU SURE?")
 # $ fisher install mattgreen/lucid.fish
 
 # gitnow (git helper)
-# $ fisher install joseluisq/gitnow@2.5.1
+# $ fisher install joseluisq/gitnow@2.5.
