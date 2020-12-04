@@ -28,5 +28,10 @@ end
 # (bc of my ctrl-a leader in tmux)
 bind --preset \ea beginning-of-line
 
+# git aliases
+alias gd="git diff --staged | bat"
+alias gcm="git commit -m"
+alias gu="git add -u"
+
 # autostart tmux
 test $TERM != "screen"; and exec tmux
