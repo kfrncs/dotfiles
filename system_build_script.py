@@ -86,3 +86,6 @@ run("pip --version".split())
 
 # gitnow (git helper)
 # run("fisher install joseluisq/gitnow@2.5.".split())
+
+# fish-tmux
+# fisher add ojiry/fish-tmux
