@@ -14,10 +14,6 @@ if answer.lower() != "y" and answer.lower() != "yes":
     print("Ok bye")
     sys.exit()
 
-# GNOME STUFF
-
-# disable hotcorners:
-# $ gsettings set org.gnome.shell enable-hot-corners false
 
 # ARCH
 
@@ -33,15 +29,19 @@ install_list = [
     "bat",
     "fish",
     "nodejs",
-    "npm"
+    "npm",
     # some deps for alacritty
     "cmake", "freetype2", "fontconfig", "pkg-config", "make", "libxcb",
     "alacritty",
     "go", "go-tools",
+    "python3", "python-pip", "ipython",
 ]
 
 # unpack install_list with * to install 
 run(["sudo", "pacman", "-S", *install_list])
+
+### TODO add section generating ssh keys, w/ links and automation (raspberry pi, gitlab, github)
+print("doing ssh stuff.... NOT")
 
 print("Installing Rust")
 run("wget https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-gnu/rustup-init".split())
@@ -59,6 +59,18 @@ os.chdir("..")
 
 print("installing fisher and starship")
 run("yay -S fisher starship".split())
+
+### TODO add section for populating dotfiles
+print("populating dotfiles...... NOT")
+
+
+# GNOME STUFF
+
+# disable hotcorners:
+# $ gsettings set org.gnome.shell enable-hot-corners false
+
+
+
 
 # fisher plugs (for some reason not working)
 
