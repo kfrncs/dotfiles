@@ -89,3 +89,12 @@ run("pip --version".split())
 
 # fish-tmux
 # fisher add ojiry/fish-tmux
+
+print("cleaning up")
+run("rm -rfv yay/".split())
+run("rm -rfv rust-init/".split())
+run("rm -fv rustup-init.1".split())
+
+# -n is for no-clobber, aka don't overwrite if it exists
+print("moving ghostscript in bin so gs alias works")
+run("sudo mv -nv /usr/bin/gs /usr/bin/ghostscript".split())
