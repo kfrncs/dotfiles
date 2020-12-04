@@ -57,8 +57,8 @@ run("makepkg -si".split())
 print("leaving yay folder")
 os.chdir("..")
 
-print("installing fisher, package manager for fish")
-run("yay -S fisher".split())
+print("installing fisher and starship")
+run("yay -S fisher starship".split())
 
 # fisher plugs (for some reason not working)
 
