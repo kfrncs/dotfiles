@@ -53,7 +53,7 @@ install_list = [
 
 # unpack install_list with * to install 
 for i in range(len(install_list)):
-    run(["sudo", "apt", "--assume-yes", "install", install_list[i])
+    run(["sudo", "apt", "--assume-yes", "install", install_list[i]])
 
 ### TODO add section generating ssh keys, w/ links and automation (raspberry pi, gitlab, github)
 print("doing ssh stuff.... NOT")
