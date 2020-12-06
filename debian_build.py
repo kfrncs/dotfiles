@@ -44,30 +44,33 @@ install_list = [
     "fish",
     "nodejs",
     "npm",
-    # some deps for alacritty
-    "cmake", "freetype2", "fontconfig", "pkg-config", "make", "libxcb",
-    "alacritty",
     "go", "go-tools",
     "python3", "python-pip", "ipython",
 ]
 
-# unpack install_list with * to install 
+# TODO switch this back to sudo apt install a b c 
+# to check which ones don't work this way.
 for i in range(len(install_list)):
     run(["sudo", "apt", "--assume-yes", "install", install_list[i]])
 
 ### TODO add section generating ssh keys, w/ links and automation (raspberry pi, gitlab, github)
 print("doing ssh stuff.... NOT")
 
+# TODO this isn't working, find out why
 print("Installing Rust")
 run("wget https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-gnu/rustup-init".split())
 run("chmod +x rustup-init".split())
 run("./rustup-init")
 
-print("installing fisher and starship")
-run("yay -S fisher starship".split())
+# print("installing fisher and starship")
+# TODO
+# run("yay -S fisher starship".split())
+# figure out how to do this on apt
 
 ### TODO bring in script for populating dotfiles
 print("populating dotfiles...... NOT")
+
+
 
 # fisher plugs (for some reason not working)
 
@@ -85,6 +88,8 @@ print("populating dotfiles...... NOT")
 
 # fish-tmux
 # fisher add ojiry/fish-tmux
+
+
 
 print("cleaning up")
 run("rm -rfv rust-init/".split())
