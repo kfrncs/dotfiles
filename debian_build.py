@@ -33,6 +33,7 @@ if answer.lower() != "y" and answer.lower() != "yes":
 # initial install
 install_list = [
     "base-devel",
+    "gcc",
     "wget", 
     "tree", 
     "git", 
@@ -51,7 +52,8 @@ install_list = [
 ]
 
 # unpack install_list with * to install 
-run(["sudo", "apt", "install", *install_list])
+for i in range(len(install_list)):
+    run(["sudo", "apt", "--assume-yes", "install", install_list[i])
 
 ### TODO add section generating ssh keys, w/ links and automation (raspberry pi, gitlab, github)
 print("doing ssh stuff.... NOT")
