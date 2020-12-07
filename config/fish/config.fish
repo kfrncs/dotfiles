@@ -34,6 +34,7 @@ alias gcm="git commit -m"
 alias gu="git add -u"
 alias gs="git status"
 alias gugd="git add -u; git diff --staged | bat"
+alias tat="tree | bat"
 
 
 # autostart tmux
