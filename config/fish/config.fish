@@ -32,7 +32,9 @@ bind --preset \ea beginning-of-line
 alias gd="git diff --staged | bat"
 alias gcm="git commit -m"
 alias gu="git add -u"
-alias gst="git status"
+alias gs="git status"
+alias gugd="git add -u; git diff --staged | bat"
+
 
 # autostart tmux
 test $TERM != "screen"; and exec tmux
