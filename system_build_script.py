@@ -36,6 +36,7 @@ install_list = [
     "go", "go-tools",
     "python3", "python-pip", "ipython",
 ]
+#TODO add install vim-plug
 
 # unpack install_list with * to install 
 run(["sudo", "pacman", "-S", *install_list])
@@ -60,7 +61,7 @@ os.chdir("..")
 print("installing fisher and starship")
 run("yay -S fisher starship".split())
 
-### TODO add section for populating dotfiles
+### TODO call script to propagate dotfiles 
 print("populating dotfiles...... NOT")
 
 
@@ -73,7 +74,10 @@ print("populating dotfiles...... NOT")
 print("check versions for python: ")
 run("pip --version".split())
 
-# fisher plugs (for some reason not working)
+print("installing pip plugins")
+# pip install -U gazpacho
+
+# fisher plugs (for some reason not working - maybe the slashes?)
 
 # pisces
 # run(["fisher", "install", "laughedelic/pisces"])
