@@ -35,6 +35,7 @@ install_list = [
     "alacritty",
     "go", "go-tools",
     "python3", "python-pip", "ipython",
+    "fzf",
 ]
 
 # unpack install_list with * to install 
