@@ -94,6 +94,9 @@ print("installing pip plugins")
 # fish-tmux
 # fisher add ojiry/fish-tmux
 
+# bang-bang, enable !! (last cmd) and !$ (last arg)
+# fisher install oh-my-fish/plugin-bang-bang
+
 print("cleaning up")
 run("rm -rfv yay/".split())
 run("rm -rfv rust-init/".split())
