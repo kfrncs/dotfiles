@@ -26,16 +26,13 @@ install_list = [
     "neovim", 
     "tmux", 
     "xclip",
-    "bat",
     "fish",
     "nodejs",
     "npm",
     # some deps for alacritty
     "cmake", "freetype2", "fontconfig", "pkg-config", "make", "libxcb",
-    "alacritty",
     "go", "go-tools",
     "python3", "python-pip", "ipython",
-    "fzf",
 ]
 
 # unpack install_list with * to install 
@@ -48,6 +45,15 @@ print("Installing Rust")
 run("wget https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-gnu/rustup-init".split())
 run("chmod +x rustup-init".split())
 run("./rustup-init")
+
+# CARGO INSTALLS
+cargo_installs = [
+    'alacritty'
+    'skim',
+    'bat',
+]
+ 
+run(["cargo", "install", *cargo_installs])
 
 # install yay
 print("cloning yay")
