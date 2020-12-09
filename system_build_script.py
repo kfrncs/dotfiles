@@ -17,6 +17,8 @@ if answer.lower() != "y" and answer.lower() != "yes":
 
 # ARCH
 
+# TODO add community repos
+
 # initial install
 install_list = [
     "base-devel",
@@ -35,6 +37,9 @@ install_list = [
     "alacritty",
     "go", "go-tools",
     "python3", "python-pip", "ipython",
+    "ncurses",
+    "jupyter-notebook",
+    "textlive-most" # LaTeX
 ]
 #TODO add install vim-plug
 
@@ -48,6 +53,22 @@ print("Installing Rust")
 run("wget https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-gnu/rustup-init".split())
 run("chmod +x rustup-init".split())
 run("./rustup-init")
+
+print("Installing Wasmer.... NOT")
+# this isnt gonna work
+# run('curl https://get.wasmer.io -sSfL | sh'.split())
+# sudo ln ~/.wasmer/bin/wasmer /usr/bin/wasmer
+
+
+#### DID I LOSE THE CARGO SECTION? ON WHICH OS DO YOU LIVE?
+# potential TODO to rewrite here
+
+cargo_installs - [
+    'bat',
+    'skim',
+    'starship',
+    'alacritty',
+]
 
 # install yay
 print("cloning yay")
