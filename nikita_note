@@ -1,3 +1,0 @@
-copy the init.vim (check propagate_dotfiles.py)
-install vim-plug
-run :PlugInstall within nvim. restart nvim or source the config (but i forget how)
