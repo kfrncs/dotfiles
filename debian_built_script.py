@@ -77,14 +77,13 @@ call("sudo ln ~/.wasmer/bin/wasmer /usr/bin/wasmer", shell=True)
 
 print()
 print("#####################################################################")
-print("Please install fisher:")
-print("curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher")
+print("Please source Rust:")
+print("source ~/.cargo/env")
 print("Copy/paste")
 print("#####################################################################")
-fisher_answer = input("Y/N? ")
+rust_answer = input("Y/N? ")
 
-if fisher_answer.lower() != "y" and fisher_answer.lower() != "yes":
-    print("curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher")
+if rust_answer.lower() != "y" and rust_answer.lower() != "yes":
     print("Ok bye")
     sys.exit()
 

@@ -5,6 +5,9 @@ import os
 
 def propagate():
 
+    # make nvim config folder if needed
+    run(["mkdir", "-p", "/home/ken/.config/nvim/"])
+
     # [FROM, TO], [FROM, TO]
     config_list = [
             ["config/nvim/init.vim", "/home/ken/.config/nvim/init.vim",],
