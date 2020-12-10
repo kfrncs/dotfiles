@@ -1,32 +1,38 @@
 #!/usr/bin/fish
 
-# get OS name (TODO control flow to do different things for Arch and Deb)
-uname -n
-echo "works"
 # example of how to add smthg to path
 # set PATH ~/.random_pls_delete/bin/ $PATH
 
-read -l -P 'Do you want to continue? [y/N] ' confirm
+# get OS name (TODO control flow to do different things for Arch and Deb)
+set os (uname -n)
+echo "OS detected is `$os`"
+
+echo ""; echo "###################################"; echo ""
+echo 'CAUTION: WE ARE ABOUT TO BUILD A NEW SYSTEM.'
+echo ""; echo "###################################"; echo ""
+read -l -P 'CONTINUE? [y/N] ' confirm
 
 switch $confirm
     case Y y
-        echo "yes" # continue
+        echo "Alright, let's do this." # continue
     case '' N n
-        echo "no" # exit
+        echo "ok bye" # exit
+        exit
 end
 
-# # Debian 
-# 
-# # Allows you to add-apt-repository
-# run(["sudo", "apt", "install", "software-properties-common"])
-# 
-# # TODO add community repos
-# run("sudo add-apt-repository ppa:neovim-ppa/stable".split())
-# 
-# print("Setting Git identity")
-# run('git config --global user.email "kennethpatrickfrancis@gmail.com"'.split())
-# run('git config --global user.name "Ken Francis"'.split())  
-# 
+#TODO: get username with:
+read -P 'What did you set as your username? ' username
+echo "username is $username"
+# then replace "ken" with it throughout the file
+
+# Add community repos. TODO: more?
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:neovim-ppa/stable
+
+echo "Setting Git identity"
+git config --global user.email "kennethpatrickfrancis@gmail.com"
+git config --global user.name "Ken Francis"
+ 
 # # initial install
 # install_list = [
 # #    "base-devel", TODO
