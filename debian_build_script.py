@@ -56,9 +56,8 @@ run(["sudo", "curl", "-fLo", "/.config/nvim/autoload/plug.vim", "--create-dirs",
 print("doing ssh stuff.... NOT")
 
 print("Installing Rust")
-run("wget https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-gnu/rustup-init".split())
-run("chmod +x rustup-init".split())
-run("./rustup-init")
+run("curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh", shell=True)
+run("rustup default nightly".split())
 call(". /home/ken/.cargo/env", shell=True)
 
 propagate_dotfiles.propagate()
@@ -106,7 +105,7 @@ print("all done! don't forget to source ~/.config/fish/config.fish and run :Plug
 
 run('ssh-keygen -t ed25519 -C "kennethpatrickfrancis@gmail.com"'.split())  
 print("Your public ssh id_ed25519 (github):")
-print(run('cat ~/.ssh/id_ed25519.pub'.split()))  
+print(run('cat /home/ken/.ssh/id_ed25519.pub'.split()))  
 
 '''
 # pisces
