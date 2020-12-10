@@ -98,7 +98,7 @@ run(["cargo", "install", *cargo_list])
 
 print("cleaning up")
 run("rm -fv rust-init".split())
-run("rm -fv rustup-init.*".split())
+run("rm -fv rustup-init.1".split())
 run("rm -rfv __pycache__/".split())
 
 print("all done! don't forget to source ~/.config/fish/config.fish and run :PlugInstall in nvim")
