@@ -39,7 +39,7 @@ install_list = [
     "python3", "python-pip", "ipython",
     "ncurses",
     "jupyter-notebook",
-    "textlive-most" # LaTeX
+    "texlive-most" # LaTeX
 ]
 #TODO add install vim-plug
 
