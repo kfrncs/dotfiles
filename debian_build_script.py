@@ -82,7 +82,7 @@ call("sudo ln ~/.wasmer/bin/wasmer /usr/bin/wasmer", shell=True)
 print()
 print("#####################################################################")
 print("Please source Rust:")
-print("source ~/.cargo/env")
+print("$ source ~/.cargo/env")
 print("Copy/paste")
 print("#####################################################################")
 rust_answer = input("Y/N? ")
@@ -97,7 +97,6 @@ cargo_list = [
     'starship',
     'racer',
 ]
-
 run(["cargo", "install", *cargo_list])
 
 print("cleaning up")
@@ -106,24 +105,18 @@ run("rm -fv rustup-init.1".split())
 run("rm -rfv __pycache__/".split())
 
 
+# outro
 run('ssh-keygen -t ed25519 -C "kennethpatrickfrancis@gmail.com"'.split())  
 print("Your public ssh id_ed25519 (github):")
 print(run('cat /home/ken/.ssh/id_ed25519.pub'.split()))  
 
-print("all done! don't forget to\n -source ~/.config/fish/config.fish \n run :PlugInstall in nvim")
-print("- run chsh -s /usr/bin/fish")
+print("\n\n")
+print("all done! don't forget to: \n\n- run :PlugInstall in nvim")
 print("- edit /etc/apt/sources.list so that `buster`/release name -> `unstable`")
-print("then run sudo apt update; sudo apt upgrade; sudo apt full-upgrade")n
-'''
-# pisces
-run(["fisher", "install", "laughedelic/pisces"])
+print("$ source ~/.config/fish/config.fish") 
+print("$ chsh -s /usr/bin/fish")
+print("$ curl -sL https://git.io/fisher | fish && fisher install jorgebucaran/fisher")
+print('$ fisher install jethrokuan/z mattgreen/lucid.fish laughedelic/pisces joseluisq/gitnow')
+print('$ fisher install ojiry/fish-tmux oh-my-fish/plugin-bang-bang')
+print("$ sudo apt update; sudo apt upgrade; sudo apt full-upgrade")
 
-# z fish
-run(["fisher", "install", "jethrokuan/z"])
-
-# git status plugin
-run(["fisher", "install", "mattgreen/lucid.fish"])
-
-# gitnow (git helper)
-run(["fisher", "install", "joseluisq/gitnow@2.5.", "ojiry/fish-tmux", "oh-my-fish/plugin-bang-bang"])
-'''
