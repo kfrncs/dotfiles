@@ -1,8 +1,14 @@
+# start tmux
+if status is-interactive
+and not set -q TMUX
+    exec tmux
+end
+
 # remove the default fish greeting
 set fish_greeting
 
 # set prompt to Starship
- starship init fish | source
+starship init fish | source
 
 # add rust/cargo to path
 set -x PATH $PATH ~/.cargo/bin
@@ -34,8 +40,7 @@ alias gcm="git commit -m"
 alias gu="git add -u"
 alias gs="git status"
 alias gugd="git add -u; git diff --staged | bat"
+
 alias tat="tree | bat"
 
 
-# autostart tmux
-test $TERM != "screen"; and exec tmux

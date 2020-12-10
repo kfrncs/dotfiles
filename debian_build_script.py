@@ -104,6 +104,10 @@ run("rm -rfv __pycache__/".split())
 
 print("all done! don't forget to source ~/.config/fish/config.fish and run :PlugInstall in nvim")
 
+run('ssh-keygen -t ed25519 -C "kennethpatrickfrancis@gmail.com"'.split())  
+print("Your public ssh id_ed25519 (github):")
+print(run('cat ~/.ssh/id_ed25519.pub'.split())  
+
 '''
 # pisces
 run(["fisher", "install", "laughedelic/pisces"])
