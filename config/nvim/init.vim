@@ -1,4 +1,20 @@
-call plug#begin('~/.config/nvim/autoload/plug.vim')
+" install vim-plug if it's not found
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+    silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" Make the undo file for persistent undo if it doesn't exist
+if empty(glob('~/.config/nvim/undo/'))
+    silent !mkdir ~/.config/nvim/undo
+endif
+
+" enable persistent undo
+set undofile
+set undodir=~/.config/nvim/undo/
+
+call plug#begin('~/.config/nvim/autoload/')
 
 " autocomplete
 " Plug 'Shougo/deoplete.nvim'
@@ -106,13 +122,8 @@ set relativenumber
 noremap <Leader>y "+y
 noremap <Leader>p "+p
 
-" enable mouse
-set mouse=a
-
-" enable persistent undo
-" NOTE; this folder must exist
-set undofile
-set undodir=~/nvim/undo
+" enable mouse. Disable for WSL? Can't paste
+" set mouse=a
 
 " rusty tags
 autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/

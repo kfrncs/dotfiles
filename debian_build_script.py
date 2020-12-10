@@ -92,6 +92,7 @@ cargo_list = [
     'bat',
     'skim',
     'starship',
+    'racer',
 ]
 
 run(["cargo", "install", *cargo_list])

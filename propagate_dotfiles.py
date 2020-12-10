@@ -7,6 +7,8 @@ def propagate():
 
     # make nvim config folder if needed
     run(["mkdir", "-p", "/home/ken/.config/nvim/"])
+    run(["mkdir", "-p", "/home/ken/.config/fish/"])
+
 
     # [FROM, TO], [FROM, TO]
     config_list = [
