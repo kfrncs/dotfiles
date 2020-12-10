@@ -66,10 +66,6 @@ call(". /home/ken/.cargo/env", shell=True)
 
 propagate_dotfiles.propagate()
 
-# GNOME STUFF
-
-# disable hotcorners:
-# $ gsettings set org.gnome.shell enable-hot-corners false
 
 # print("installing pip plugins")
 # run(["pip", "install", "-U", "gazpacho"])

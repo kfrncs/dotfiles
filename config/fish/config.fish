@@ -43,4 +43,6 @@ alias gugd="git add -u; git diff --staged | bat"
 
 alias tat="tree | bat"
 
+# couple GNOME settings. TODO Disable for headlesss
+gsettings set org.gnome.shell enable-hot-corners false
 gsettings set org.gnome.shell.app-switcher current-workspace-only true
