@@ -49,7 +49,8 @@ install_list = [
 run(["sudo", "apt", "install", *install_list])
 
 # install vim-plug
-run(["curl", "-fLo", "/.local/share/nvim/site/autoload/plug.vim", "--create-dirs", "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"])
+run(["sudo", "curl", "-fLo", "/.config/nvim/autoload/plug.vim", "--create-dirs", "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"])
+
 
 ### TODO add section generating ssh keys, w/ links and automation (raspberry pi, gitlab, github)
 print("doing ssh stuff.... NOT")
@@ -96,9 +97,11 @@ cargo_list = [
 run(["cargo", "install", *cargo_list])
 
 print("cleaning up")
-run("rm -rfv rust-init/".split())
-run("rm -fv rustup-init.1".split())
-run("rm -rfc __pycache__/".split())
+run("rm -fv rust-init".split())
+run("rm -fv rustup-init.*".split())
+run("rm -rfv __pycache__/".split())
+
+print("all done! don't forget to source ~/.config/fish/config.fish and run :PlugInstall in nvim")
 
 '''
 # pisces

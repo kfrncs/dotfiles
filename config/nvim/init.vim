@@ -1,4 +1,4 @@
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('~/.config/nvim/autoload/plug.vim')
 
 " autocomplete
 " Plug 'Shougo/deoplete.nvim'
