@@ -53,7 +53,8 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'pangloss/vim-javascript'
 Plug 'kchmck/vim-coffee-script'
 Plug 'fatih/vim-go'
-" Plug 'sheerun/vim-polyglot'
+Plug 'dag/vim-fish'
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
