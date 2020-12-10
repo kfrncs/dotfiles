@@ -18,7 +18,11 @@ if answer.lower() != "y" and answer.lower() != "yes":
 
 # Debian 
 
+# Allows you to add-apt-repository
+run(["sudo", "apt", "install", "software-properties-common"])
+
 # TODO add community repos
+run("sudo add-apt-repository ppa:neovim-ppa/stable".split())
 
 print("Setting Git identity")
 run('git config --global user.email "kennethpatrickfrancis@gmail.com"'.split())
@@ -106,8 +110,10 @@ run('ssh-keygen -t ed25519 -C "kennethpatrickfrancis@gmail.com"'.split())
 print("Your public ssh id_ed25519 (github):")
 print(run('cat /home/ken/.ssh/id_ed25519.pub'.split()))  
 
-print("all done! don't forget to source ~/.config/fish/config.fish and run :PlugInstall in nvim")
-print("also run chsh -s /usr/bin/fishj")
+print("all done! don't forget to\n -source ~/.config/fish/config.fish \n run :PlugInstall in nvim")
+print("- run chsh -s /usr/bin/fish")
+print("- edit /etc/apt/sources.list so that `buster`/release name -> `unstable`")
+print("then run sudo apt update; sudo apt upgrade; sudo apt full-upgrade")n
 '''
 # pisces
 run(["fisher", "install", "laughedelic/pisces"])
