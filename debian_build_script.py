@@ -106,7 +106,7 @@ print("all done! don't forget to source ~/.config/fish/config.fish and run :Plug
 
 run('ssh-keygen -t ed25519 -C "kennethpatrickfrancis@gmail.com"'.split())  
 print("Your public ssh id_ed25519 (github):")
-print(run('cat ~/.ssh/id_ed25519.pub'.split())  
+print(run('cat ~/.ssh/id_ed25519.pub'.split()))  
 
 '''
 # pisces
