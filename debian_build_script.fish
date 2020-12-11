@@ -9,7 +9,7 @@
 #    |||
 # ___VVV INSTALL LIST ______
 
-set install_list wget curl tree git neovim tmux xclip fish nodejs npm cmake pkg-config make python3 python-pip ipython jupyter-notebook \
+set install_list wget curl tree git neovim tmux xclip fish nodejs npm cmake pkg-config make python3 python3-pip jupyter-notebook \
 build-essential libncurses5-dev libncursesw5-dev texlive
 
 #------ yep right there ^^^^ ----
@@ -67,16 +67,14 @@ sudo apt-get -y install $install_list
 
 echo "Installing Rust"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-set PATH /home/$username/.cargo/env $PATH
-set PATH /home/$username/.cargo/bin $PATH
+set -U fish_user_paths /home/$username/.cargo/bin $fish_user_paths
+set -U fish_user_paths /home/$username/.cargo/env $fish_user_paths
 
 # put the dotfiles out
 echo "propagating dotfiles"
 chmod +x hard_propagate.py
 ./hard_propagate.py
 
-echo "sourcing fish config"
-source ~/.config/fish/config.fish
 
 echo "installing Fisher"
 curl -sL https://git.io/fisher | fish && fisher install jorgebucaran/fisher
@@ -102,7 +100,7 @@ fisher install ojiry/fish-tmux oh-my-fish/plugin-bang-bang
 echo "installing Go"
 curl https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz -o go1.15.tar.gz
 tar -C /usr/local -xzf go1.15.tar.gz
-set path /usr/local/go $PATH
+set -U fish_user_paths /usr/local/go $fish_user_paths
 
 echo "cleaning up"
 rm -fv rust-init
