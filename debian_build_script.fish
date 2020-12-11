@@ -84,9 +84,6 @@ echo "Installing Wasmer"
 curl https://get.wasmer.io -sSfL | sh
 sudo ln ~/.wasmer/bin/wasmer /usr/bin/wasmer
 
-echo "sourcing fish config"
-source ~/.config/fish/config.fish
-
 echo "installing fisher plugins"
 fisher install jethrokuan/z mattgreen/lucid.fish laughedelic/pisces joseluisq/gitnow
 fisher install ojiry/fish-tmux oh-my-fish/plugin-bang-bang
@@ -100,6 +97,7 @@ set -U fish_user_paths /usr/local/go $fish_user_paths
 echo "propagating dotfiles"
 chmod +x hard_propagate.py
 ./hard_propagate.py
+source ~/.config/fish/config.fish
 
 echo "cleaning up"
 rm -fv rust-init
