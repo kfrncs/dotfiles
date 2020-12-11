@@ -22,6 +22,9 @@ set -x EDITOR ~/usr/bin/nvim
 # set RUST_SRC_PATH for Racer
 set -x RUST_SRC_PATH /home/ken/.rustup/toolchains/nightly-2020-10-24-x86_64-unknown-linux-gnu
 
+# add Go to the path
+set path /usr/local/go $PATH
+
 # make it so ... and .... go up 2 and 3 directories
 function ...
   ../..
