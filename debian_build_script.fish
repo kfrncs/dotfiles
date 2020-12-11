@@ -71,7 +71,7 @@ set -U fish_user_paths /home/$username/.cargo/bin $fish_user_paths
 set -U fish_user_paths /home/$username/.cargo/env $fish_user_paths
 
 echo "installing Fisher"
-curl -L https://git.io/fisher | fish && sudo fisher install jorgebucaran/fisher
+curl -L https://git.io/fisher | source && fisher install jorgebucaran/fisher
 
 echo "Changing Rust to nightly"
 rustup default nightly
