@@ -70,12 +70,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 set -U fish_user_paths /home/$username/.cargo/bin $fish_user_paths
 set -U fish_user_paths /home/$username/.cargo/env $fish_user_paths
 
-# put the dotfiles out
-echo "propagating dotfiles"
-chmod +x hard_propagate.py
-./hard_propagate.py
-
-
 echo "installing Fisher"
 curl -sL https://git.io/fisher | fish && fisher install jorgebucaran/fisher
 
@@ -101,6 +95,11 @@ echo "installing Go"
 curl https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz -o go1.15.tar.gz
 tar -C /usr/local -xzf go1.15.tar.gz
 set -U fish_user_paths /usr/local/go $fish_user_paths
+
+# put the dotfiles out
+echo "propagating dotfiles"
+chmod +x hard_propagate.py
+./hard_propagate.py
 
 echo "cleaning up"
 rm -fv rust-init
