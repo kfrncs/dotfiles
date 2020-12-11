@@ -5,20 +5,20 @@
 
 # get OS name (TODO control flow to do different things for Arch and Deb)
 
-     |||
-     |||
+#    |||
+#    |||
 # ___VVV INSTALL LIST ______
 
-set install_list wget curl tree git neovim tmux xclip fish nodejs npm cmake pkg-config make python3 python-pip ipython jupyter-notebook \n
+set install_list wget curl tree git neovim tmux xclip fish nodejs npm cmake pkg-config make python3 python-pip ipython jupyter-notebook \
 build-essential libncurses5-dev libncursesw5-dev texlive
 
 #------ yep right there ^^^^ ----
 #                       ||||
 #                       ||||
 
-echo ""; echo "###################################"; echo ""
+echo ""; echo "###################################"; 
 echo""; echo "before you start, please edit /etc/apt/sources.list so that `buster`/release name -> `unstable`"; echo""; 
-echo ""; echo "###################################"; echo ""
+echo ""; echo "###################################"; 
 echo""; echo "did you run the script with `./debian_build_script.fish | tee -a debian_build.log` ???"
 echo ""; echo "###################################"; echo ""
 echo 'CAUTION: WE ARE ABOUT TO BUILD A NEW SYSTEM.'
@@ -48,11 +48,11 @@ sudo cp new_shells /etc/shells
 chsh -s /usr/bin/fish
 
 echo ""; echo "full upgrade"; echo ""
-sudo apt -y update; sudo apt -y dist-upgrade; sudo apt -y full-upgrade;
+sudo apt-get -y update; sudo apt-get -y dist-upgrade; sudo apt-get -y full-upgrade;
 
 #TODO more community repos?
 echo "adding community repos"
-sudo apt install software-properties-common -y
+sudo apt-get install -y software-properties-common
 
 echo ""; echo "SKIPPED - see what version of nvim comes up:"
 echo "sudo add-apt-repository ppa:neovim-ppa/stable"; echo ""
@@ -62,8 +62,8 @@ git config --global user.email "kennethpatrickfrancis@gmail.com"
 git config --global user.name "Ken Francis"
 
 # initial install
-echo "installing install_list with apt"
-sudo apt install $install_list -y
+echo "installing install_list with apt-get"
+sudo apt-get -y install $install_list
 
 echo "Installing Rust"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
