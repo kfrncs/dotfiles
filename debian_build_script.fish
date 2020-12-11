@@ -9,8 +9,8 @@
 #    |||
 # ___VVV INSTALL LIST ______
 
-set install_list wget curl tree git neovim tmux xclip fish nodejs npm cmake pkg-config make python3 python3-pip jupyter-notebook \
-build-essential libncurses5-dev libncursesw5-dev texlive
+set install_list wget curl tree git neovim tmux xclip fish nodejs npm cmake pkg-config make python3 python3-pip jupyter-notebook jupyter-core\
+jupyter-terminal build-essential libncurses5-dev libncursesw5-dev texlive
 
 #------ yep right there ^^^^ ----
 #                       ||||
