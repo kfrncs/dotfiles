@@ -71,7 +71,7 @@ set -U fish_user_paths /home/$username/.cargo/bin $fish_user_paths
 set -U fish_user_paths /home/$username/.cargo/env $fish_user_paths
 
 echo "installing Fisher"
-curl -sL https://git.io/fisher | fish && fisher install jorgebucaran/fisher
+curl -sL https://git.io/fisher | fish && sudo fisher install jorgebucaran/fisher
 
 echo "Changing Rust to nightly"
 rustup default nightly
@@ -93,7 +93,7 @@ fisher install ojiry/fish-tmux oh-my-fish/plugin-bang-bang
 
 echo "installing Go"
 curl https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz -o go1.15.tar.gz
-tar -C /usr/local -xzf go1.15.tar.gz
+sudo tar -C /usr/local -xzf go1.15.tar.gz
 set -U fish_user_paths /usr/local/go $fish_user_paths
 
 # put the dotfiles out
