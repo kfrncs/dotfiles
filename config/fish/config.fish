@@ -4,14 +4,14 @@ and not set -q TMUX
     exec tmux
 end
 
+# add rust/cargo to path
+set -x PATH $PATH ~/.cargo/bin
+
 # remove the default fish greeting
 set fish_greeting
 
 # set prompt to Starship
 starship init fish | source
-
-# add rust/cargo to path
-set -x PATH $PATH ~/.cargo/bin
 
 # export ssh keys
 set -x SSH_KEY_PATH ~/.ssh/id_rsa.pub 
@@ -45,5 +45,4 @@ alias tat="tree | bat"
 
 # gnome stuff (TODO disable for headless)
 gsettings set org.gnome.shell.app-switcher current-workspace-only true
-gsettings set org.gnome.shell enable-hot-corners false
 
