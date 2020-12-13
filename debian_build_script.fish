@@ -109,6 +109,10 @@ rm go1.15.tar.gz
 echo "creating ssh key"
 ssh-keygen -t ed25519 -C "kennethpatrickfrancis@gmail.com"
 
+echo "cloning notes"
+cd ~
+git clone pi@192.168.2.80:/home/pi/notes
+
 echo "all done!"
 echo "Your public ssh id_ed25519 (github):"
 cat /home/$username/.ssh/id_ed25519.pub
