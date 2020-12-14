@@ -144,3 +144,6 @@ autocmd BufEnter * call ncm2#enable_for_buffer()
 " IMPORTANT: :help Ncm2PopupOpen for more information
 set completeopt=noinsert,menuone,noselect
 
+" point ncm clang plugin at the c library
+let g:ncm2_pyclang#library_path = '/usr/lib/clang/11.0.0/lib/'
+
