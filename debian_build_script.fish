@@ -10,7 +10,7 @@
 # ___VVV INSTALL LIST ______
 
 set install_list wget curl tree git neovim tmux xclip fish nodejs npm cmake pkg-config make python3 python3-pip jupyter-notebook jupyter-core \
-build-essential libncurses5-dev libncursesw5-dev texlive
+build-essential libncurses5-dev libncursesw5-dev texlive tldr
 
 #------ yep right there ^^^^ ----
 #                       ||||
@@ -108,6 +108,10 @@ rm go1.15.tar.gz
 
 echo "creating ssh key"
 ssh-keygen -t ed25519 -C "kennethpatrickfrancis@gmail.com"
+
+echo "cloning notes"
+cd ~
+git clone pi@192.168.2.80:/home/pi/notes
 
 echo "all done!"
 echo "Your public ssh id_ed25519 (github):"
