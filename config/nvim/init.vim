@@ -151,5 +151,3 @@ let g:rust_fold = 1
 " point ncm clang plugin at the c library
 let g:ncm2_pyclang#library_path = '/usr/lib/clang/11.0.0/lib/'
 
-" alias :Sw for 'sudo write'
-command! -nargs=0 Sw w !sudo tee % > /dev/null
