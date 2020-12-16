@@ -147,3 +147,7 @@ set completeopt=noinsert,menuone,noselect
 
 " Allow code folding in Rust (zc, zo?)
 let g:rust_fold = 1
+
+" point ncm clang plugin at the c library
+let g:ncm2_pyclang#library_path = '/usr/lib/clang/11.0.0/lib/'
+

@@ -11,7 +11,7 @@
 # ___VVV INSTALL LIST ______
 
 set install_list wget curl tree git neovim tmux xclip fish nodejs npm cmake pkg-config make python3 python3-pip jupyter-notebook jupyter-core \
-build-essential libncurses5-dev libncursesw5-dev texlive tldr
+build-essential libncurses5-dev libncursesw5-dev texlive tldr libclang-dev
 
 
 #------ yep right there ^^^^ ----
