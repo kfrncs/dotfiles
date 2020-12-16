@@ -46,4 +46,4 @@ alias gugd="git add -u; git diff --staged | bat"
 
 alias tat="tree | bat"
 
-
+gsettings set org.gnome.shell.app-switcher current-workspace-only false

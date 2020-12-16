@@ -55,6 +55,7 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'fatih/vim-go'
 Plug 'dag/vim-fish'
 Plug 'sheerun/vim-polyglot'
+Plug 'szymonmaszke/vimpyter' " Jupyter
 
 call plug#end()
 
@@ -144,3 +145,5 @@ autocmd BufEnter * call ncm2#enable_for_buffer()
 " IMPORTANT: :help Ncm2PopupOpen for more information
 set completeopt=noinsert,menuone,noselect
 
+" Allow code folding in Rust (zc, zo?)
+let g:rust_fold = 1

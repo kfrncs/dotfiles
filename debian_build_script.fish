@@ -3,6 +3,7 @@
 #TODO: better ssh automation
 #TODO more community repos?
 
+
 # get OS name (TODO control flow to do different things for Arch and Deb)
 
 #    |||
@@ -11,6 +12,7 @@
 
 set install_list wget curl tree git neovim tmux xclip fish nodejs npm cmake pkg-config make python3 python3-pip jupyter-notebook jupyter-core \
 build-essential libncurses5-dev libncursesw5-dev texlive tldr
+
 
 #------ yep right there ^^^^ ----
 #                       ||||
@@ -112,6 +114,8 @@ ssh-keygen -t ed25519 -C "kennethpatrickfrancis@gmail.com"
 echo "cloning notes"
 cd ~
 git clone pi@192.168.2.80:/home/pi/notes
+
+pip3 install https://github.com/aaren/notedown/tarball/master
 
 echo "all done!"
 echo "Your public ssh id_ed25519 (github):"
